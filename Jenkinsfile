@@ -14,6 +14,16 @@ pipeline {
                                 dir
                                 C:\\Joe\\Maven\\apache-maven-3.8.8\\bin\\mvn clean package'''
                     }
+                    '构建client-svc': {
+                        bat '''cd client-svc
+                                dir
+                                C:\\Joe\\Maven\\apache-maven-3.8.8\\bin\\mvn clean package'''
+                    }
+                    '构建client-svc8083': {
+                        bat '''cd client-svc8083
+                                dir
+                                C:\\Joe\\Maven\\apache-maven-3.8.8\\bin\\mvn clean package'''
+                    }
                 )
             }
         }
