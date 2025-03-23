@@ -27,5 +27,11 @@ pipeline {
                 )
             }
         }
+
+        stage('停止已启动应用'){
+            steps {
+                bat 'call C:\Joe\workspace\stop.bat'
+            }
+        }
     }
 }
