@@ -60,8 +60,7 @@ pipeline {
         success {
             script {
                 echo '启动项目'
-                //bat 'call C:\\Joe\\workspace\\start.bat'
-                def process = bat(script: 'call C:\\Joe\\workspace\\start.bat', returnStdout: true).trim()
+                bat 'call C:\\Joe\\workspace\\start.bat'
             }
         }
     }
