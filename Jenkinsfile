@@ -52,4 +52,10 @@ pipeline {
             }
         }
     }
+
+    post {
+        success {
+            echo 'Post-build task: Sending success notification...'
+        }
+    }
 }
