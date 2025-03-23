@@ -33,5 +33,11 @@ pipeline {
                 bat 'call C:\Joe\workspace\stop.bat'
             }
         }
+
+        stage('备份目标文件夹下文件'){
+            steps {
+                bat 'move "C:\Joe\workspace\jars\*" "C:\Joe\workspace\jars\backup"'
+            }
+        }
     }
 }
