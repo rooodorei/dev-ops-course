@@ -55,7 +55,8 @@ pipeline {
 
     post {
         success {
-            echo 'Post-build task: Sending success notification...'
+            echo '启动项目'
+            bat 'call C:\Joe\workspace\start.bat'
         }
     }
 }
