@@ -1,5 +1,8 @@
 pipeline {
     agent any
+    environment {
+        JENKINS_NODE_COOKIE = 'dontKillMe'
+    }
     stages {
         stage('编译打包项目'){
             steps {
