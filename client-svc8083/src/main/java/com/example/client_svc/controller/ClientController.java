@@ -14,6 +14,7 @@ public class ClientController {
         static {
             clients.put(1, new Client(1, "Adam"));
             clients.put(2, new Client(2, "Bob"));
+            clients.put(2, new Client(3, "DevOps"));
         }
 
     @GetMapping("/getClient/{id}")
