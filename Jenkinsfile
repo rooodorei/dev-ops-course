@@ -55,8 +55,10 @@ pipeline {
 
     post {
         success {
-            echo '启动项目'
-            bat 'call C:\\Joe\\workspace\\start.bat'
+            script {
+                echo '启动项目'
+                bat 'call C:\\Joe\\workspace\\start.bat'
+            }
         }
     }
 }
