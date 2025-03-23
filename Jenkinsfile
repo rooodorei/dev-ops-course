@@ -44,10 +44,10 @@ pipeline {
 
         stage('复制打包文件到目标文件夹'){
             steps {
-                bat '''copy "C:\\Joe\\workspace\\register-center-svc\\target\\register-center-svc-0.0.1-SNAPSHOT.jar" "C:\\Joe\\workspace\\jars"
-                       copy "C:\\Joe\\workspace\\bwic-svc\\target\\bwic-svc-0.0.1-SNAPSHOT.jar" "C:\\Joe\\workspace\\jars"
-                       copy "C:\\Joe\\workspace\\client-svc\\target\\client-svc-0.0.1-SNAPSHOT.jar" "C:\\Joe\\workspace\\jars"
-                       copy "C:\\Joe\\workspace\\client-svc8083\\target\\client-svc8083-0.0.1-SNAPSHOT.jar" "C:\\Joe\\workspace\\jars"
+                bat '''robocopy register-center-svc\\target C:\\Joe\\workspace\\jars register-center-svc-0.0.1-SNAPSHOT.jar
+                       robocopy client-svc8083\\target C:\\Joe\\workspace\\jars client-svc-8083-0.0.1-SNAPSHOT.jar
+                       robocopy client-svc\\target C:\\Joe\\workspace\\jars client-svc-0.0.1-SNAPSHOT.jar
+                       robocopy bwic-svc\\target C:\\Joe\\workspace\\jars bwic-svc-0.0.1-SNAPSHOT.jar
                        exit 0'''
             }
         }
