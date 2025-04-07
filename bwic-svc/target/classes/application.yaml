@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: bwic-svc
+eureka:
+  client:
+    registerWithEureka: false
+    fetchRegistry: true
+    registryFetchIntervalSeconds: 10
+    service-url:
+      defaultZone: http://localhost:8082/eureka
+
+##close cors check
+cors:
+  allowed-origins: "*"
+  allowed-methods: "*"
+  allowed-headers: "*"
+  allow-credentials: true
+  max-age: 1800
