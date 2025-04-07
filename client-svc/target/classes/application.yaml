@@ -1,0 +1,12 @@
+server:
+  port:
+    8081
+spring:
+  application:
+    name: client-svc
+eureka:
+  client:
+    registerWithEureka: true
+    fetchRegistry: false
+    service-url:
+      defaultZone: http://localhost:8082/eureka
